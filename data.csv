@@ -1,0 +1,244 @@
+area,42.1,km2
+population,31624,
+growth rate,0.6,
+residing rate,1,
+dwelling occupancy,2.2,
+percent single detached,0.518,
+percent duplex,0.037,
+percent row house,0.1,
+percent small apartment,0.289,
+percent large apartment,0.056,
+residential unit size,1900,sqft
+avg lot size single family,0.0776,ha
+avg lot coverage single family,0.43,
+avg lot size duplex,0.06,ha
+avg lot coverage duplex,0.45,
+avg lot size row house,0.2583,ha
+avg lot coverage row house,0.7,
+floor area ratio row house,1.38,
+avg lot size small apartment,0.18,ha
+avg lot coverage small apartment,0.7,
+floor area ratio small apartment,1.38,
+avg lot size large apartment,0.18,ha
+avg lot coverage large apartment,0.63,
+floor area ratio large apartment,1.6,
+garden irrigation rate,10,gal/sqft/year
+laundry frequency,11.25,per mo/capita
+laundry water efficiency,104.6,L/load
+hot laundry ratio,0.28,
+laundry energy efficiency,1.49,kWh/load
+laundry water heating ratio,0.92,
+standby energy loss rate,0.007536,kWh/L hot water
+faucet frequency,246.321,min/mo/capita
+faucet water efficiency,7.6,L/min
+faucet energy efficiency,0.0449,kWh/L
+hot faucet ratio,0.727,
+toilet frequency,153.5705,flush/mo/capita
+toilet water efficiency,10.7,L/flush
+dishwasher frequency,3.041,wash/mo/capita
+dishwasher water efficiency,25.4,L/cycle
+hot dishwasher ratio,1,
+dishwasher energy efficiency,3.05502,kWh/hot cycle
+dishwasher heating energy ratio,0.88,
+shower frequency,22.8075,per mo/capita
+shower water efficiency,10.8,L/min
+shower duration,8.2,min/shower
+shower energy efficiency,0.044879,kWh/L
+hot shower ratio,0.782,
+leakage and others rate,0.13,
+unit collection energy,0.004186,kWh/L
+unit treatment energy,0.00182,kWh/L
+unit distribution energy,0.002,kWh/L
+unit waste water transport energy,0.0006,kWh/L
+unit wastewater treat energy,0.0002,kWh/L
+recycling efficiency,0.95,
+park irrigation rate,12,gal/sqft/year
+initial park land,108.98,ha
+park landuse change rate,0.00405,ha/capita
+golf and parks irrigation reduction factor,0.5,
+avg lot size commercial,0.31,ha
+avg lot coverage commercial,0.61,
+floor area ratio commercial,2,
+avg lot size institutional,0.73,ha
+avg lot coverage institutional,0.73,
+floor area ratio institutional,3.6,
+avg lot size industry,1.63,ha
+avg lot coverage industry,0.9,
+floor area ratio industry,3,
+total commercial floor space,4912941,sqft
+restaurant area,0.07,%
+office area,0.38,%
+supermarket area,0.55,%
+restaurant growth rate,0.6,%/year
+office growth rate,0.6,%/year
+supermarket growth rate,0.6,%/year
+initial industry area,1793247,sqft
+industry growth rate,0.6,%/year
+initial hotel rooms,1783,rooms
+hotel growth rate,0.6,%/year
+initial hospital beds,129,
+hospital growth rate,0.6,%/year
+initial school students,4970,
+school growth rate,0.6,%/year
+floor space per room,290,sqft/room
+floor space per bed,460,sqft/bed
+floor space per student,144,sqft/student
+restaurant laundry frequency,0.0407,cycle/sqft/mo
+hotel laundry frequency,34.36,cycles/room/mo
+office laundry frequency,0,
+hospital laundry frequency,34.92,cycles/bed/mo
+industry laundry frequency,0,
+school laundr frequency,0.06241,cycle/student/mo
+supermarket laundry frequency,0.01827,cycle/sqft/mo
+nonresi laundry water efficiency,104.6,L/cycle
+restaurant faucet duration,0.25907,min/sqft/mo
+hotel faucet duration,52.8585,min/room/mo
+office faucet duration,0.01801,min/sqft/mo
+hospital faucet duration,114.59,min/bed/mo
+industry faucet duration,0.018014,min/sqft/mo
+school faucet duration,11.5753,min/student/mo
+supermarket faucet duration,0.04122,min/sqft/mo
+nonresi faucet water efficiency,7.6,L/min
+nonresi faucet use efficiency,0.9175,
+restaurant toilet frequency,2.086,flush/sqft/mo
+hotel toilet frequency,169.61,flush/room/mo
+office toilet frequency,0.14506,flush/sqft/mo
+hospital toilet frequency,922.82,flush/bed/mo
+industry toilet frequency,0.14506,flush/sqft/mo
+school toilet frequency,25.7728,flush/student/mo
+supermarket toilet frequency,0.12072,flush/sqft/mo
+nonresi toilet water efficiency,11.4,L/flush
+nonresi urinal water efficiency,6.1,L/flush
+restaurant urinal frequency,0.92057,flush/sqft/mo
+hotel urinal frequency,74.844,flush/room/mo
+office urinal frequency,0.064,flush/sqft/mo
+hospital urinal frequency,407.2045,flush/bed/mo
+industry urinal frequency,0.064,flush/sqft/mo
+school urinal frequency,11.37,flush/student/mo
+supermarket urinal frequency,0.05327,flush/sqft/mo
+restaurant dishwasher frequency,0.56885,cycle/sqft/mo
+hotel dishwasher frequency,34.979,cycle/room/mo
+office dishwasher frequency,0.000638,cycle/sqft/mo
+hospital dishwasher frequency,32.5,cycle/bed/mo
+industry dishwasher frequency,0.000638,cycle/sqft/mo
+school dishwasher frequency,0.706,cycle/sqft/mo
+supermarket dishwasher frequency,0.02125,cycle/sqft/mo
+nonresi dishwasher water efficiency,25.4,L/cycle
+nonresi shower water efficiency,10.9,L/min
+nonresi shower use efficiency,0.94,
+restaurant shower duration,0.2785,min/sqft/mo
+hotel shower duration,491.53,min/room/mo
+office shower duration,0.0193,min/sqft/mo
+hospital shower duration,123.2291,min/bed/mo
+industry shower duration,0.01937,min/sqft/mo
+school shower duration,0.7866,min/student/mo
+supermarket shower duration,0,
+prerinse faucet efficiency,11.9,L/min
+restaurant prerinse duration,1.515,min/sqft/mo
+hotel prerinse duration,93.16,min/sqft/mo
+office prerinse duration,0.0017,min/sqft/mo
+hospital prerinse duration,86.56,min/bed/mo
+industry prerinse duration,0.0017,min/sqft/mo
+school prerinse duration,1.8803,min/sqft/mo
+supermarket prerinse duration,0.0566,min/sqft/mo
+restaurant cooling heating,0.3516,L/sqft/mo
+hotel cooling heating,815.475,L/room/mo
+office cooling heating,0.53057,L/sqft/mo
+hospital cooling heating,1567.07,L/bed/mo
+industry cooling heating,0.5305,L/sqft/mo
+school cooling heating,32.9176,L/student/mo
+supermarket cooling heating,2.0344,L/sqft/mo
+restaurant leakage and others,8.5247,L/sqft/mo
+hotel leakage and others,2920.43,L/room/mo
+office leakage and others,0.5168,L/sqft/mo
+hospital leakage and others,2922.29,L/bed/mo
+industry leakage and others,0.5167,L/sqft/mo
+school leakage and others,54.409,L/student/mo
+supermarket leakage and others,0.9616,L/sqft/mo
+restaurant food preparation and icemakers,18.66,L/sqft/mo
+hotel food preparation and icemakers,1147.95,L/bed/mo
+office food preparation and icemakers,0.02096,L/sqft/mo
+hospital food preparation and icemakers,1066.63,L/bed/mo
+industry food preparation and icemakers,0.02096,L/sqft/mo
+school food preparation and icemakers,23.17,L/student/mo
+supermarket food preparation and icemakers,0.6976,L/sqft/mo
+nonresi laundry energy efficiency,1.43,kWh/hot cycle
+nonresi hot laundry ratio,0.28,
+nonresi faucet energy efficiency,0.044879,kWh/L
+nonresi hot faucet ratio,0.727,
+nonresi dishwasher energy efficiency,2.5502,kWh/hot cycle
+nonresi hot dishwasher ratio,1,
+nonresi shower energy efficiency,0.044879,kWh/L
+nonresi hot shower ratio,0.782,
+prerinse energy efficiency,0.044879,kWh/L
+hot prerinse ratio,0.727,
+average monthly rainfall,58,mm
+rainwater harvesting,0,
+carbon footprint electricity,0.003,kg CO2e/kWh
+carbon footprint solar thermal,0.01735,kg CO2e/kWh
+carbon footprint solar PV,0.04991,kg CO2e/kWh
+carbon footprint natural gas,0.18,kg CO2e/kWh
+carbon footprint oil,0.25219,kg CO2e/kWh
+carbon footprint propane,0.22,kg CO2e/kWh
+percent by electricity for pumping,1,
+percent by solar PV for pumping,0,
+percent by electricity for water treatment,1,
+percent by solar PV for water treatment,0,
+percent by electricity for ww transport,1,
+percent by solar PV for ww transport,0,
+percent by electricity for ww treatment,1,
+percent by solar PV for ww treatment,0,
+percent by electricity for gw recycling,1,
+percent by solar PV for gw recycling,0,
+percent by electricity for resi hot water,0.269,
+percent by solar thermal for resi hot water,0,
+percent by natural gas for resi hot water,0.668,
+percent by oil for resi hot water,0.058,
+percent by propane for resi hot water,0.005,
+percent by electricity for nonresi hot water,0.269,
+percent by solar thermal for nonresi hot water,0,
+percent by natural gas for nonresi hot water,0.668,
+percent by oil for nonresi hot water,0.058,
+percent by propane for nonresi hot water,0.005,
+WF electricity,19.7,L/kWh
+WF solar thermal,3.975,L/kWh
+WF solar PV,0.04,L/kWh
+WF natural gas,0.4,L/kWh
+WF oil,1.22,L/kWh
+WF propane,1.3,L/kWh
+chlorine dosage in WT,12,mg/L
+PAC dosage in WT,16.98,mg/L
+polymer dosage in WT,2.11,mg/L
+chlorine dosage in WWT,0,mg/L
+PAC dosage in WWT,19.9,mg/L
+polymer dosage in WWT,0,mg/L
+WF chlorine,0.0000103,L/mg
+WF PAC,0.00000271,L/mg
+WF polymer,0.000128,L/mg
+CF chlorine,0.00000139,kgCO2e/mg
+CF PAC,0.00000041,kgCO2e/mg
+CF polymer,0.00000283,kgCO2e/mg
+EE chlorine,0.00000735,kWh/mg
+EE PAC,5.421E-07,kWh/mg
+EE polymer,3.204E-07,kWh/mg
+biosolids generation rate,0.00202,kg/L
+transportation distance,8,km
+fuel usage,0.0000428,L/kg-km
+load factor,0.5,
+energy efficiency of fuel,10.64,kWh/L
+CF transportation fuel,0.2522,KgCO2e/kWh
+WF transportation fuel,1.22,L/kWh
+emission factor CH4,0.03,kg CH4/kg of BOD
+BOD generation rate,1.824,kg/capita/mo
+emision factor N2O,0.000317,kg/capita/mo
+initial infilt inflow rate,110,L/capita/day
+initial infilt inflow reduced rate,1,
+infilt inflow change rate,0.0059,/mo
+initial water treat energy change rate,1,
+unit treat energy change rate,0.00028,/mo
+initial ww treat energy change rate,1.07,
+unit ww treat energy change rate,0.01034,/mo
+distribution loss,0.05,
+irrigated garden proportion,0.75,
+irrigated park proportion,0.8,
+RWH energy use rate,0.0008,kWh/L
