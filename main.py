@@ -61,6 +61,8 @@ stats["carbon_treat_pv"] = []
 stats["carbon_wwtrans_pv"] = []
 stats["carbon_wwtreat_pv"] = []
 stats["carbon_dist_pv"] = []
+stats["resi_heating_st"] = []
+stats["nonresi_heating_st"] = []
 
 stats["water_final"] = []
 stats["energy_final"] = []
@@ -428,7 +430,7 @@ for year in range(0,21):
     cf_o = data[1][180]
     cf_p = data[1][181]
 
-    e_pumping = w_need * data[1][48] * 1000
+    e_pumping = w_need * data[1][50] * 1000
     cf_pumping_hy = e_pumping * pumping_pow[0] * cf_hy
     cf_pumping_pv = e_pumping * pumping_pow[1] * cf_spv
 
@@ -475,18 +477,25 @@ for year in range(0,21):
     cf_ww_treatment = stats["carbon_wwtreat_hy"][year] + stats["carbon_wwtreat_pv"][year]
 
     # heating
-    e_resi_nonheating = e_laundry + e_dishwash
-    e_resi_heating = e_laundry_sb + e_faucet + e_shower
-    e_nr_nonheating = e_nr_dishwasher_heating
-    e_nr_heating = e_nr_heating_laundry + e_nr_heating_faucet + e_nr_shower + e_nr_prerinse
+    e_resi_heating = e_laundry_sb + e_faucet + e_shower + e_dishwash
+    e_nr_heating = e_nr_dishwasher_heating + e_nr_heating_laundry + e_nr_heating_faucet + e_nr_shower + e_nr_prerinse
 
-    cf_resi_heating = e_resi_heating * (resi_hot_pow[0] * cf_hy + resi_hot_pow[1] * cf_st
-                                        + resi_hot_pow[2] * cf_ng + resi_hot_pow[3]  * cf_o
-                                        + resi_hot_pow[4] * cf_p)
+    if year == 0:
+        stats["resi_heating_st"].append(e_resi_heating * resi_hot_pow[1] * cf_st)
+        stats["nonresi_heating_st"].append(e_nr_heating * nonresi_hot_pow[1] * cf_st)
+    else:
+        stats["resi_heating_st"].append(e_resi_heating * resi_hot_pow[1] * cf_st - sum(stats["resi_heating_st"]))
+        stats["nonresi_heating_st"].append(e_nr_heating * nonresi_hot_pow[1] * cf_st - sum(stats["nonresi_heating_st"]))
 
-    cf_nr_heating = e_nr_heating * (nonresi_hot_pow[0] * cf_hy + nonresi_hot_pow[1] * cf_st
-                                    + nonresi_hot_pow[2] * cf_ng + nonresi_hot_pow[3]  * cf_o
-                                    + nonresi_hot_pow[4] * cf_p)
+    cf_resi_heating = e_resi_heating * (resi_hot_pow[0] * cf_hy
+                                        + resi_hot_pow[2] * cf_ng
+                                        + resi_hot_pow[3]  * cf_o
+                                        + resi_hot_pow[4] * cf_p) + stats["resi_heating_st"][year]
+
+    cf_nr_heating = e_nr_heating * (nonresi_hot_pow[0] * cf_hy
+                                    + nonresi_hot_pow[2] * cf_ng
+                                    + nonresi_hot_pow[3]  * cf_o
+                                    + nonresi_hot_pow[4] * cf_p) + stats["nonresi_heating_st"][year]
 
     # electrical wf
     wf_hy = data[1][202] / 1000 * (e_pumping * pumping_pow[0] + e_treat * wtreat_pow[0]
@@ -528,7 +537,7 @@ for year in range(0,21):
     wf_sludge_trans = e_sludge_trans * data[1][229] / 1000
 
     wf_treatment = wf_chlor_wt + wf_pac_wt + wf_pol_wt + wf_sludge_trans
-    e_treatment = e_ww_transport + e_ww_treatment + ee_chlor_wt + ee_pac_wt + ee_pol_wt + e_sludge_trans
+    e_treatment = e_ww_transport + e_ww_treatment + e_sludge_trans + ee_chlor_wt + ee_pac_wt + ee_pol_wt
     e_dist = e_pumping + e_treat
 
     cf_total = (cf_pumping + cf_treat + cf_ww_transport + cf_ww_treatment + cf_resi_heating + cf_nr_heating
@@ -536,7 +545,7 @@ for year in range(0,21):
 
     ## totals
     t_water = w_need + wf_electrical + wf_treatment
-    t_energy = e_resi_nonheating + e_resi_heating + e_nr_nonheating + e_nr_heating + e_treatment + e_dist
+    t_energy = e_resi_heating + e_nr_heating + e_treatment + e_dist
     t_carbon = cf_total
 
     stats["energy_dist"].append(e_dist)
