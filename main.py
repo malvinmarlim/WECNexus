@@ -1,7 +1,10 @@
 ## imports
 import numpy as np
 import pandas as pd
+import matplotlib
 from matplotlib import pyplot as plt
+
+# import easygui
 from copy import deepcopy as dc
 
 ## notes
@@ -10,8 +13,18 @@ from copy import deepcopy as dc
 # cost to reduce leakage 0.4 $/m3
 
 ## load data
+# print('select data file')
+# data_dir = easygui.fileopenbox()
+# print('select parameters file')
+# params_dir = easygui.fileopenbox()
+#
+# data = pd.read_csv(data_dir, header=None)
+# params = pd.read_csv(params_dir, header=None)
+
 data = pd.read_csv("data.csv", header=None)
 params = pd.read_csv("params.csv", header=None)
+
+print('data loaded')
 
 ## params
 pop_gr = data[1][2] / 100
@@ -203,7 +216,7 @@ for year in range(0,21):
 
     irrigate_park = park_irg_rate / 264.2 * 10.764 # m3/m2/year
 
-    area_park = data[1][55] * 10**4 + household_add * data[1][56] / 1000
+    area_park = data[1][55] * 10**4 + household_add * data[1][56] * 10**4
 
     area_aver_commer = data[1][58] * 10**4
     area_aver_commer_cover = data[1][59]
@@ -216,15 +229,15 @@ for year in range(0,21):
 
     area_commer = data[1][67]
 
-    area_restaurant = area_commer * data[1][68] * (1+params[1][14]/1000)**year
-    area_office = area_commer * data[1][69] * (1+params[1][15]/1000)**year
-    area_supermarket = area_commer * data[1][70] * (1+params[1][16]/1000)**year
+    area_restaurant = area_commer * data[1][68] * (1+params[1][14]/100)**year
+    area_office = area_commer * data[1][69] * (1+params[1][15]/100)**year
+    area_supermarket = area_commer * data[1][70] * (1+params[1][16]/100)**year
 
-    area_ind = data[1][74] * (1+params[1][17]/1000)**year
+    area_ind = data[1][74] * (1+params[1][17]/100)**year
 
-    init_hotel = data[1][76] * (1+params[1][18]/1000)**year
-    init_hospital = data[1][78] * (1+params[1][19]/1000)**year
-    init_school = data[1][80] * (1+params[1][20]/1000)**year
+    init_hotel = data[1][76] * (1+params[1][18]/100)**year
+    init_hospital = data[1][78] * (1+params[1][19]/100)**year
+    init_school = data[1][80] * (1+params[1][20]/100)**year
 
     floor_hotel = init_hotel * data[1][82]
     floor_hospital = init_hospital * data[1][83]
@@ -580,6 +593,8 @@ ax.set_ylabel('Water Usage (m$^3$)')
 ax2.set_ylabel('Water Footprint (m$^3$/capita)')
 ax.grid()
 
+fig.savefig('WECN_water.png')
+
 fig, ax = plt.subplots(figsize=(10,6))
 
 ax.plot(years, aa_stats["energy_final"], color='orange')
@@ -592,6 +607,8 @@ ax.set_ylabel('Energy Usage (kWh)')
 ax2.set_ylabel('Energy Footprint (kWh/capita)')
 ax.grid()
 
+fig.savefig('WECN_energy.png')
+
 fig, ax = plt.subplots(figsize=(10,6))
 
 ax.plot(years, aa_stats["carbon_final"], color='green')
@@ -603,6 +620,8 @@ ax.set_xlabel('Year')
 ax.set_ylabel('Carbon Emission (kgCO2)')
 ax2.set_ylabel('Carbon Footprint (kgCO2/capita)')
 ax.grid()
+
+fig.savefig('WECN_carbon.png')
 
 ##
 print_sheet = aa_stats.to_csv("result.csv")
